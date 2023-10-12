@@ -1,21 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void star(void)//animyeon biwuodo doem
+void func1(void)
 {
-  int i;
-  for(i=0; i<10; i++)
-           printf("*");
+     int x;
+     
+     printf("func1 x is at %p\n", &x);
+     //%p << 16jinsu, &x = juso?? mola
 }
 
 int main(int argc, char *argv[])
 {
-  int i;
+  int x;
   
+  printf("main x is at %p\n",&x);
+  func1();
   
-  star();
-  star();
-  star();
   
   system("PAUSE");	
   return 0;
