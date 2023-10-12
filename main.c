@@ -24,7 +24,7 @@ int get_max(int x, int y)
     else
         return y; 
 }
-
+            
 int main(int argc, char *argv[])
 {
     
@@ -33,10 +33,10 @@ int main(int argc, char *argv[])
     a = 3;
     b = 7;
     
-    printf("sumTwo result is %i\n",sumTwo(a,b));
+    printf("sumTwo result is %i\n",sumTwo(a,b));    
     printf("square result is %i\n",square(a));
-    printf("get_max result is %i\n",get_max(a,b));
-  
+    printf("get_max result is %i\n",get_max(a,b));    
+  //breakpoint reul baewuda
   system("PAUSE");	
   return 0;
 }
