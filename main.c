@@ -1,29 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void square1(int a)
+
+int factorial(int n)
 {
-     a = a*a;
+    int i;
+    
+    int res = 1;
+    for (i=1;i<=n;i++)
+        res = res*i;
+    return res;
 }
 
-int square2(int a)
+int combination(int n, int r)
 {
-    return(a*a);
-}
-         
+    int dev1, dev2, dev3;
+    
+    dev1 = factorial(n);
+    dev2 = factorial(r);
+    dev3 = factorial(n-r);
+    
+    return (dev1/dev2/dev3);
+    
+} 
+////////////////////////////////////////////////////
+     
 int main(int argc, char *argv[])
 {
-    int a = 2;
-    square1(a);
-    printf("a=%i\n",a);
-    
-    int b = 2;
-    b = square2(b);
-    printf("b=%i\n",b);
-    
+
+   int n,r;
+   
+   printf("input two numbers: ");
+   scanf("%d %d", &n, &r);
+   
+   printf("the answer is %d\n",combination(n,r));
+   
+   
   system("PAUSE");	
   return 0;
 }
 
 
-//jal moreugesseoyo YoY
